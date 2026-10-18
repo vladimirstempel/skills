@@ -25,6 +25,16 @@ For when the agent does the work in a field you don't know yet (3D, gamedev, ML,
 
 Turn it off or on later by telling the agent "turn learning mode off/on".
 
+### concept-to-multiview
+
+Reference images for a 3D model in two stages, each on the model that does it best.
+
+- Codex (GPT Image) draws a few concept variants from your brief. You choose one.
+- Antigravity CLI (Gemini) turns the chosen concept into one multiview sheet: front, sides, back, top and 3/4 on a flat grey background, ready for image-to-3D services such as Tripo.
+- The agent reviews each sheet against the concept and reruns the views that drift.
+
+Needs the Codex CLI with image generation and the Antigravity CLI (`agy`), both signed in, plus `jq`.
+
 ## License
 
 MIT
